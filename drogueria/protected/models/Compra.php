@@ -185,7 +185,7 @@ class Compra extends CActiveRecord
                 $product=Producto::model()->findByPk($detalle->producto);
                 if(isset($product))
                 {
-                    $product->stock-=$detalle->cantidad;
+                   // $product->stock-=$detalle->cantidad;
                     $product->save();
                 }
                 

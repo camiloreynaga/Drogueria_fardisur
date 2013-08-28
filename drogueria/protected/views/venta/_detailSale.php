@@ -32,7 +32,7 @@
                             'filter'=>CHtml::dropDownList('Producto[id_laboratorio]',array(),CHtml::listData(Producto::model()->getListLaboratorio(),'id','laboratorio'),array('prompt'=>'-- Seleccione --')),
                             'htmlOptions'=>array('style'=>'width: 115px;')
                     ),
-                    //'stock',
+                    'stock',
                    array(         // display a column with "view", "update" and "delete" buttons
                     'class'=>'CButtonColumn',
                     'template'=>'{add}',
