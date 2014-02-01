@@ -27,7 +27,7 @@
                     ),
                     //'presentacion',
                     array(
-                            'name'=>'id_laboratorio',
+                            'name'=>'laboratorio',
                             'value'=>'$data->laboratorio0->laboratorio',
                             'filter'=>CHtml::dropDownList('Producto[id_laboratorio]',array(),CHtml::listData(Producto::model()->getListLaboratorio(),'id','laboratorio'),array('prompt'=>'-- Seleccione --')),
                             'htmlOptions'=>array('style'=>'width: 115px;')
@@ -62,8 +62,12 @@
                     ),
                     array(
                         'name'=>'cantidad',
-                        'value'=>'$data->cantidad." (und)"'
+                        'value'=>'$data->cantidad'
                     ),
+//                    array(
+//                        'name'=>'Pre.',
+//                        'value'=>'$data->presentacion0->presentacion'
+//                    ),
                     array(
                         'name'=>'precio_unitario',
                         'value'=>'"S./ ".$data->precio_unitario'

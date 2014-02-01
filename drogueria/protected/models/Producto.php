@@ -105,24 +105,16 @@ class Producto extends CActiveRecord
 		// Warning: Please modify the following code to remove attributes that
 		// should not be searched.
 
-		$criteria=new CDbCriteria;
-                
-                $criteria->alias='producto';
-                
-		$criteria->compare('id',$this->id);
-
-		$criteria->compare('tipo_producto',$this->tipo_producto);
-		
-		$criteria->with=array('tipo_producto0');
-
+		$criteria=new CDbCriteria;                
+                $criteria->alias='producto';                
+		$criteria->compare('producto.id',$this->id);
+		$criteria->compare('tipo_producto',$this->tipo_producto);		
+		$criteria->with=array('tipo_producto0',);                
+                //,'presentacion0','laboratorio0');
 		$criteria->compare('nombre_producto',$this->nombre_producto,true);
-
 		$criteria->compare('concentracion',$this->concentracion,true);
-
-		$criteria->compare('presentacion',$this->presentacion);
-		
+		$criteria->compare('presentacion',$this->presentacion);		
 		$criteria->with=array('presentacion0');
-
 		$criteria->compare('id_laboratorio',$this->id_laboratorio);
 		//$criteria->compare('laboratorio',Yii::app()->Laboratorio->laboratorio);
 		

@@ -32,27 +32,27 @@
                                 array('label'=>'Usuarios',
                                     'items'=>array( 
                                         array('label'=>'Crear','url'=>array('/usuario/create')), 
-                                        array('label'=>'Administrar','url'=>array('/usuario/index')), 
+                                        array('label'=>'Administrar','url'=>array('/usuario/admin')), 
                                       ), 
                                 ),
                                 array('label'=>'Productos',
                                     'items'=>array( 
                                         array('label'=>'Crear','url'=>array('/producto/create')), 
-                                        array('label'=>'Administrar','url'=>array('/producto/index')), 
+                                        array('label'=>'Administrar','url'=>array('/producto/admin')), 
                                       ), 
                                 ),
                                 array('label'=>'Compras', 'items'=>array( 
                                         array('label'=>'Crear','url'=>array('/compra/create')), 
-                                        array('label'=>'Administrar','url'=>array('/compra/index')), 
+                                        array('label'=>'Administrar','url'=>array('/compra/admin')), 
                                       )),
                                 array('label'=>'Ventas', 'items'=>array( 
                                         array('label'=>'Crear','url'=>array('/venta/create')), 
-                                        array('label'=>'Administrar','url'=>array('/venta/index')), 
+                                        array('label'=>'Administrar','url'=>array('/venta/admin')), 
                                       )),
 				//array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
 				//array('label'=>'Contact', 'url'=>array('/site/contact')),
-				array('label'=>'Proveedores', 'url'=>array('/proveedor')),
-				array('label'=>'Clientes', 'url'=>array('/cliente')),
+				array('label'=>'Proveedores', 'url'=>array('/proveedor/admin')),
+				array('label'=>'Clientes', 'url'=>array('/cliente/admin')),
                             
                             
                                 array('label'=>'Reportes', 'items'=>array( 

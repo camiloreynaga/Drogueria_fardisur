@@ -42,20 +42,31 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
+//            array(
+//                'name'=>'id',
+//                'value'=>'id',
+//                ),    
+                'id',
 		array(
                     'name'=>'tipo_producto',
-                    'value'=>'$data->tipo_producto0->tipo_producto'
+                    'value'=>'$data->tipo_producto0->tipo_producto',
+                    'htmlOptions'=>array('style'=>'width: 100px;'),
+                    'filter'=>CHtml::dropDownList('Producto[tipo_producto]',  array(),CHtml::listData(Producto::model()->getListTipos_produtos(),'id','tipo_producto'),array('prompt'=>'-- Seleccione --'))
+                
                 ),
                 'nombre_producto',
                 'concentracion',
 		array(
                     'name'=>'presentacion',
-                    'value'=>'$data->presentacion0->presentacion'
+                    'value'=>'$data->presentacion0->presentacion',
+                    'filter'=>CHtml::dropDownList('Producto[presentacion]',array(),CHtml::listData(Producto::model()->getListPresentacion(),'id_presentacion','presentacion'),array('prompt'=>'-- Seleccione --')),
                 ),
 		//'presentacion',
 		array (
-                    'name'=>'id_laboratorio',
-                    'value'=>'$data->laboratorio0->laboratorio'
+                    'name'=>'laboratorio',
+                    'value'=>'$data->laboratorio0->laboratorio',
+                     'filter'=>CHtml::dropDownList('Producto[id_laboratorio]',array(),CHtml::listData(Producto::model()->getListLaboratorio(),'id','laboratorio'),array('prompt'=>'-- Seleccione --')),
+                           
                 ),
 		//'laboratorio',
                 'minimo_stock',

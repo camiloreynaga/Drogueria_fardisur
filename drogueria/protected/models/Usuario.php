@@ -83,8 +83,11 @@ class Usuario extends CActiveRecord
 		// should not be searched.
 
 		$criteria=new CDbCriteria;
+                $criteria->alias='user';
 
-		$criteria->compare('id',$this->id);
+		$criteria->compare('user.id',$this->id);
+                
+                
 
 		$criteria->compare('empleado',$this->empleado);
 		$criteria->with=array('empleado0');

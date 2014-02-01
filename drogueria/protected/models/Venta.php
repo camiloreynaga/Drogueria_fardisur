@@ -92,8 +92,9 @@ class Venta extends CActiveRecord
 		// should not be searched.
 
 		$criteria=new CDbCriteria;
+                $criteria->alias='venta';
 
-		$criteria->compare('id',$this->id);
+		$criteria->compare('venta.id',$this->id);
 
 		$criteria->compare('id_cliente',$this->id_cliente);
 		$criteria->with=array('id_cliente0');

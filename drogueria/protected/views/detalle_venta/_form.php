@@ -46,7 +46,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'precio_unitario'); ?>
-		<?php echo $form->textField($model,'precio_unitario',array('size'=>10,'maxlength'=>10)); ?>
+		<?php echo $form->textField($model,'precio_unitario',array('value'=>$model->id_producto0->precio, 'size'=>10,'maxlength'=>10)); ?>
 		<?php echo $form->error($model,'precio_unitario'); ?>
 	</div>
 

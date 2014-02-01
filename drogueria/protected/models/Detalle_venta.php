@@ -11,7 +11,7 @@
  * @property integer $cantidad
  * @property string $precio_unitario
  */
-class Detalle_venta extends CActiveRecord
+class Detalle_venta extends CActiveRecord 
 {
 	/**
 	 * Returns the static model of the specified AR class.
@@ -107,7 +107,7 @@ class Detalle_venta extends CActiveRecord
         public function getListLote($id_producto)
 	{
 		$criteria = new CDbCriteria();
-		$criteria->select='lote';
+		$criteria->select='lote,cantidad'; //lote
                 $criteria->compare('producto',$id_producto);
                 $criteria->addCondition('cantidad_disponible > 0');
                 

@@ -1,0 +1,32 @@
+id
+producto
+lote
+fecha vencimiento
+presentación
+laboratorio
+cantidad (stock)
+
+orden asc por producto
+
+agrupado por laboratorio
+
+Query BD
+
+SELECT p.id, nombre_producto, DetComp.lote, DetComp.fecha_vencimiento, pre.presentacion, lab.laboratorio, p.stock
+FROM producto AS p
+INNER JOIN presentacion AS pre ON p.presentacion = pre.id_presentacion
+INNER JOIN detalle_Compra AS DetComp ON DetComp.producto = p.id
+INNER JOIN laboratorio AS lab ON lab.id = p.id_laboratorio
+ORDER BY `nombre_producto` , lab.laboratorio ASC 
+
+-----
+Actualizar data
+
+1) usar la funcion buscar la ubicar los stock
+
+SELECT p.id, nombre_producto, DetComp.lote, DetComp.fecha_vencimiento, pre.presentacion, lab.laboratorio, p.stock
+FROM producto AS p
+INNER JOIN presentacion AS pre ON p.presentacion = pre.id_presentacion
+INNER JOIN detalle_Compra AS DetComp ON DetComp.producto = p.id
+INNER JOIN laboratorio AS lab ON lab.id = p.id_laboratorio
+ORDER BY `nombre_producto` , lab.laboratorio ASC 
